@@ -1,3 +1,97 @@
+// ----------------------------------------------------------
+// 1. plot2d3() - Plot using vertical bars
+// ----------------------------------------------------------
+function demo_plot2d3()
+    clf()
+    x = 0:2*%pi/20:2*%pi;
+    plot2d3(x, sin(x));
+    xtitle("Example of plot2d3()", "x", "sin(x)");
+endfunction
+
+// ----------------------------------------------------------
+// 2. min() - Find the minimum value
+// ----------------------------------------------------------
+function demo_min()
+    disp("---- Example of min() ----");
+    [m, k] = min([5 3 -2 8]);
+    disp(m, "Minimum value:");
+    disp(k, "Index (position):");
+endfunction
+
+// ----------------------------------------------------------
+// 3. max() - Find the maximum value
+// ----------------------------------------------------------
+function demo_max()
+    disp("---- Example of max() ----");
+    [m, k] = max([5 3 -2 8]);
+    disp(m, "Maximum value:");
+    disp(k, "Index (position):");
+endfunction
+
+// ----------------------------------------------------------
+// 4. subplot() - Split the graphics window into a grid
+// ----------------------------------------------------------
+function demo_subplot()
+    clf()
+    x = 0:0.1:2*%pi;
+
+    subplot(2,1,1)
+    plot2d(x, sin(x))
+    title("sin(x)")
+
+    subplot(2,1,2)
+    plot2d(x, cos(x))
+    title("cos(x)")
+endfunction
+
+// ----------------------------------------------------------
+// 5. title() - Set the title of a plot
+// ----------------------------------------------------------
+function demo_title()
+    clf()
+    x = 0:0.1:2*%pi;
+    plot2d(x, sin(x))
+    title("Plot of sin(x)", "fontsize", 3, "color", "blue")
+endfunction
+
+// ----------------------------------------------------------
+// 6. xlabel() - Set the x-axis label
+// ----------------------------------------------------------
+function demo_xlabel()
+    clf()
+    x = 0:0.1:2*%pi;
+    plot2d(x, sin(x))
+    xlabel("x axis (rad)")
+endfunction
+
+// ----------------------------------------------------------
+// 7. ylabel() - Set the y-axis label
+// ----------------------------------------------------------
+function demo_ylabel()
+    clf()
+    x = 0:0.1:2*%pi;
+    plot2d(x, sin(x))
+    ylabel("sin(x)")
+endfunction
+
+// ----------------------------------------------------------
+// 8. bool2s() - Convert a boolean matrix to a 0/1 matrix
+// ----------------------------------------------------------
+function demo_bool2s()
+    disp("---- Example of bool2s() ----");
+    disp("bool2s([%t %t %f %t]) =", bool2s([%t %t %f %t]));
+    disp("bool2s([2.3 0 10 -1]) =", bool2s([2.3 0 10 -1]));
+endfunction
+
+// ----------------------------------------------------------
+// 9. deff() - Inline definition of a function
+// ----------------------------------------------------------
+function demo_deff()
+    disp("---- Example of deff() ----");
+    deff('x = myplus(y,z)', 'x = y+z');
+    disp(myplus(1,2), "myplus(1,2) =");
+endfunction
+
 function ex2()
     n = -5:5;
     msignal = bool2s (n >= 0);
