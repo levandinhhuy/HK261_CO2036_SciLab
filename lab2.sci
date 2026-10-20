@@ -137,15 +137,15 @@ function ex6()
     n = -1:3; 
     x1 = [0, 0, 1, 3, -2]; x2 = [0, 1, 2, 3, 0];
     y = x1 + x2;
-    
+
     subplot(2,3,1); plot2d3(n, x1); plot(n, x1, 'b*');
     a1 = gca(); a1.data_bounds = [-2, -4; 4, 8];
     title('Signal x_1(n)'); xlabel('n'); ylabel('x_1(n)'); xgrid;
-    
+
     subplot(2,3,2); plot2d3(n, x2); plot(n, x2, 'b*');
     a1 = gca(); a1.data_bounds = [-2, -4; 4, 8];
     title('Signal x_2(n)'); xlabel('n'); ylabel('x_2(n)'); xgrid;
-    
+
     subplot(2,3,3); plot2d3(n, y); plot(n, y, 'b*');
     a1 = gca(); a1.data_bounds = [-2, -4; 4, 8];
     title('Signal y(n) = x_1(n) + x_2(n)'); xlabel('n'); ylabel('y(n)'); xgrid;
@@ -155,15 +155,15 @@ function ex7()
     n = -1:3; 
     x1 = [0, 0, 1, 3, -2]; x2 = [0, 1, 2, 3, 0];
     y = x1 .* x2;
-    
+
     subplot(2,3,1); plot2d3(n, x1); plot(n, x1, 'b*');
     a1 = gca(); a1.data_bounds = [-2, -4; 4, 10];
     title('Signal x_1(n)'); xlabel('n'); ylabel('x_1(n)'); xgrid;
-    
+
     subplot(2,3,2); plot2d3(n, x2); plot(n, x2, 'b*');
     a1 = gca(); a1.data_bounds = [-2, -4; 4, 10];
     title('Signal x_2(n)'); xlabel('n'); ylabel('x_2(n)'); xgrid;
-    
+
     subplot(2,3,3); plot2d3(n, y); plot(n, y, 'b*');
     a1 = gca(); a1.data_bounds = [-2, -4; 4, 10];
     title('Signal y(n) = x_1(n).x_2(n)'); xlabel('n'); ylabel('y(n)'); xgrid;
